@@ -413,4 +413,15 @@ ocasiones se sobreescriben las reglas CSS
 - personalizaciones del autor.
 2) la especificidad del selector (cuando aplicas ambos estilos cual tiene mayor peso)
 3) orden de aparicion (a arriba hacia abajo osea el ultimo seria el escogido)
+
+la especificidad es el peso que tiene un selector cuando hay conflicto de estilos. se calcula de la siguiente forma:
+-etiquetas y pseudoelementos ------------- 0,0,0,1
+-clases, atributos y pseudoclases -------- 0,0,1,0
+-identificadores ------------------------- 0,1,0,0
+-estilos en linea ------------------------ 1,0,0,0
+!important ------------------ rompe la especifidad
 */
+
+blockquote {
+    background-color: burlywood;
+}
