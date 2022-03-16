@@ -1,0 +1,416 @@
+/* Regla CSS consta de 2 partes.
+1) el selector: es el elemento html al que se le aplica los estilos. 2) bloque de declaraciones: es cada uno de los atributos que modificamos {
+    atributo: valor;
+    atributo-de-mas-dedos-palabras: otro-valor;
+} */
+
+
+/*para llamar otra hoja de estilos dentro de otra es con una regla que se llama; import son mala practica porque son bloqueantes a la hora del cargar el navegador*/
+
+@import url('otro.css');
+h1 {
+    color: yellowgreen;
+    background-color: black;
+}
+
+
+/* links de referencia documentacion
+Emmet.io - https://emmet.io/
+Enlaces de la documentación de CSS:
+https://es.wikipedia.org/wiki/Hoja_de...
+https://www.w3.org/html/logo/
+https://www.w3.org/standards/webdesig...
+https://www.w3.org/TR/css-2020/
+https://developer.mozilla.org/es/docs...
+CSS Reference - https://cssreference.io/
+Can I Use - https://caniuse.com/
+Code Guide - https://codeguide.co/
+Pseudoclases - https://developer.mozilla.org/es/docs...
+Pseudoelementos - https://developer.mozilla.org/es/docs...
+Propiedades hederables - https://web.dev/learn/css/inheritance...
+Reset CSS - https://meyerweb.com/eric/tools/css/r...
+Normalize CSS - https://necolas.github.io/normalize.css/
+Autoprefixer CSS - https://autoprefixer.github.io/
+Modelo de Caja - https://developer.mozilla.org/es/docs...
+Tamaño de Caja Paul Irish - https://www.paulirish.com/2012/box-si...
+960 Grid System - https://960.gs/
+*/
+
+
+/* 
+Existen selectores básicos
+1) etiquetas: son elementos HTML
+2) identificadores: son atributos id - #
+3) clases: atributo class - .
+*/
+
+p {
+    color: black;
+}
+
+
+/*agregamos un estilo al fondo del parrafo con el id parrafo-dos en el html*/
+
+
+/*dar estilos con ID se considera malas practicas evitar los ID*/
+
+#parrafo-dos {
+    background-color: skyblue;
+}
+
+
+/*lo mas recomendable es utilizar clases
+dar estilos con clases nos permite reutilizar nuestro codigo CSS, estas clases se crean en el HTML y llama al CSS*/
+
+.text-20 {
+    font-size: 20px;
+}
+
+.text-32 {
+    font-size: 32px;
+}
+
+.bg-skyblue {
+    background-color: skyblue;
+}
+
+.bg-steelblu {
+    background-color: steelblue;
+}
+
+.text-white {
+    color: white;
+}
+
+
+/*se aplica los estilos a los hijos directos cuando en el html esta como en el orden del primer nivel, 
+recuerda que le da color a todo el bloque por que las etiquetas li son en bloque
+se utiliza el mayor que
+*/
+
+.hijos-directos>b {
+    background-color: thistle;
+}
+
+.hijos-directos>li {
+    background-color: thistle;
+}
+
+
+/*se aplica los estilos a los hijos descendientes cuando en el html esta en desorden, 
+se le da el fondo al texto porque la etiqueta b solo ocupa el espacio del texto*/
+
+.hijos-descendientes b {
+    background-color: thistle;
+}
+
+
+/*los selectores de hermanos van aplicar a todos elementos hermanos y que esten por debajo 
+por el elemento de referencia que LI; para obtener ~ con la tecla alt gr + ~*/
+
+.hermanos-general~li {
+    background-color: thistle;
+}
+
+
+/*los selectores de hermanos adyacentes van aplicar al elemento hermano que este por debajo*/
+
+.hermanos-adyacentes+li {
+    background-color: thistle;
+}
+
+
+/*selectores de atributos para seleccionar el atributo debes colocarlo entre 
+corchetes ejemplo a los atributos href quiero que le des los estilos a continuacion*/
+
+.selectores-atributos a[href] {
+    color: orangered;
+}
+
+
+/*con los selectores de atributos tambien podemos elegir a que propiedad podemos 
+cambiarle los estilos en el caso de que no tenga target no adquirira los estilos*/
+
+.selectores-atributos a[target="_blank"] {
+    font-weight: bold;
+}
+
+
+/*con los selectores de atributos tambien podemos darle estilo con una referencia segun 
+el texto del contenido ejemplo entonces todas las etiquetas que contengan el texto en href jonmircha adquieren los estilos*/
+
+
+/*el asterisco signifa que mientras el elemento contenga esta palabra va adquirir los estilos*/
+
+.selectores-atributos a[href*="jonmircha"] {
+    font-size: 24px;
+}
+
+
+/*el comodin ^ hace que los elementos el estilo se va aplicar cuando empiesen con la palabra o 
+el termino aplicar ejemplo los que empiezen con http: quitales la decoracion del texto*/
+
+.selectores-atributos a[href^="http:"] {
+    text-decoration: none;
+}
+
+
+/*el comodin ^ hace que los elementos el estilo se va aplicar cuando terminen con la palabra 
+o el termino aplicar ejemplo los que terminen con .com ponle fondo negro*/
+
+.selectores-atributos a[href$=".com"] {
+    background-color: black;
+}
+
+
+/*el comodin ~ hace que los elementos el estilo se va aplicar cuando terminen la palabra o 
+el termino aplicar se encuentre en una lista separada ejemplo la propiedad cursos que esta en la clase de la etiqueta a cambiale el fondo blue*/
+
+.selectores-atributos a[class~="cursos"] {
+    background-color: blue;
+}
+
+
+/*el comodin | hace que los elementos el estilo se va aplicar cuando al lado de la palabra o el termino aplicar se 
+encuentre un guion ejemplo la propiedad menu que tenga un - al lado cambiale el estilo de letra a cursiva*/
+
+.selectores-atributos a[class|="menu"] {
+    font-style: italic;
+}
+
+
+/*selector universal (*) en este caso los estilos se aplican a todos los elementos dentro del html*/
+
+* {
+    font-family: sans-serif;
+}
+
+
+/*el selector universal aplica los estilos a todos los elementos que se encuentren dentro de la class ejemplo .selector-universal letra 24*/
+
+.selector-universal * {
+    font-size: 24px;
+}
+
+
+/*pseudo classes https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes*/
+
+
+/*cuando se añade la propiedad de pseudo classes ejemplo required todos los elementos que tengan el atributo required tendran un color de borde amarillo*/
+
+.form-pseudoclases *:required {
+    border-color: yellow;
+}
+
+
+/*cuando se añade la propiedad de pseudo classes ejemplo valid todos los elementos que sean validos dentro del recuadro seran de borde verde*/
+
+.form-pseudoclases *:valid {
+    border-color: green;
+}
+
+
+/*cuando se añade la propiedad de pseudo classes ejemplo invalid todos los elementos invalidos seran de borde rojo*/
+
+.form-pseudoclases *:invalid {
+    border-color: red;
+}
+
+
+/*cuando se añade la propiedad de pseudo classes ejemplo focus todo los elementos 
+que se le da click con el cursor cambiaran a color azul el fondo*/
+
+.form-pseudoclases *:focus {
+    background-color: aqua;
+}
+
+.form-pseudoclases *:disabled {
+    background-color: pink;
+}
+
+
+/*esta propiedad se añadio para cambiar las secciones y no 
+cambien el color al predeterminado si no al color elegido cuando se le de click de visita*/
+
+.menu-pseudoclases a:visited {
+    color: green;
+}
+
+
+/*cualquier elemento tiene estado hover este cambia su color o 
+seleccion cuando se pasa el cursor recuerda que debe estar despues de otra propiedad*/
+
+.menu-pseudoclases a:hover {
+    color: orange;
+}
+
+
+/*cuando tenga el cursor sobre el parrafo el tamaño de la letra cambia*/
+
+.p-pseudaclases:hover {
+    font-size: 20px;
+}
+
+
+/*aveces es necesario utilizar id para darle una propiedad que cuando activemos 
+un enlace le de un estilo de color verde sin necesidad de usar js*/
+
+#temario-css:target {
+    background-color: lightgreen;
+}
+
+
+/*con la pseudoclasse first-child aplicaremos estilos al primer elemento del hijo de los li*/
+
+.lista-pseudoclases li:first-child {
+    color: green;
+}
+
+
+/*con la pseudoclasse last-child aplicaremos estilos al ultimo elemento del hijo de los li*/
+
+.lista-pseudoclases li:last-child {
+    color: violet;
+}
+
+
+/*con la pseudoclasse nth-child aplicaremos estilos al tercer elemento hijo de los li*/
+
+.lista-pseudoclases li:nth-child(3) {
+    color: blue;
+}
+
+
+/*con la pseudoclasse nth-child mas la propiedad (4n) aplicaremos estilos de 4 en 4 a los elementos li*/
+
+.lista-pseudoclases li:nth-child(4n) {
+    font-size: 20px;
+}
+
+
+/*con la pseudoclasse nth-child mas la propiedad (3n + 1) aplicaremos estilos de 3 en 3 y se corre 1 de color negrita a los elementos li*/
+
+.lista-pseudoclases li:nth-child(3n+1) {
+    font-weight: bold;
+}
+
+
+/*con la pseudoclasse nth-child mas la propiedad (even) que significa pares aplicaremos estilos en los pares a los elementos li*/
+
+.lista-pseudoclases li:nth-child(even) {
+    background-color: yellow;
+}
+
+
+/*con la pseudoclasse nth-child mas la propiedad (odd) que significa impares aplicaremos estilos en los impares a los elementos li*/
+
+.lista-pseudoclases li:nth-child(odd) {
+    background-color: pink;
+}
+
+
+/*con la pseudoclasse first-of-type que significa el primero de su tipo aplicaremos estilos en los parrafos*/
+
+.articulo-pseudoclases p:first-of-type {
+    background-color: pink;
+}
+
+.articulo-pseudoclases p:last-of-type {
+    background-color: gray;
+}
+
+.articulo-pseudoclases p:nth-of-type(3) {
+    background-color: aquamarine;
+}
+
+
+/*con la pseudoclasse * aplica a todos los del elemento los estilos menos not(p) a los parrafos*/
+
+.articulo-pseudoclases *:not(p) {
+    background-color: beige;
+}
+
+
+/*los pseudoelementos - Dan estilos a partes especificas de un elemento,
+se usa :: para diferenciarlos de las pseudoclases*/
+
+
+/*las pseudo elementos ::after y ::before nos van a 
+permitir agregar contenido antes o despues de un elemento en particular*/
+
+
+/*antes del nombre de la clase saga de geminis agrega un emoji importante en los pseudo elementos usar el content*/
+
+.saga-geminis::before {
+    content: "🤼‍♀️";
+}
+
+.saga-geminis::after {
+    content: "♊";
+}
+
+.saga-precio::before {
+    content: "💲";
+    font-weight: bold;
+}
+
+.saga-precio::after {
+    content: "USD";
+    font-weight: bold;
+}
+
+
+/*los pseudo elementos con la propiedad firts-letter(primera letra) con esto damos estilos a la primera letra del parrafo*/
+
+.p-pseudoelementos::first-letter {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+
+/*los pseudo elementos con la propiedad firts-line(primera linea) con esto damos estilos a la primera linea del parrafo*/
+
+.p-pseudoelementos::first-line {
+    color: coral;
+}
+
+
+/*los pseudo elementos con la propiedad selection(seleccionar) con esto damos estilos de seleccion al elemento aplicado*/
+
+.p-pseudoelementos::selection {
+    color: greenyellow;
+    background-color: black;
+}
+
+.input-pseudoelementos::placeholder {
+    color: green;
+}
+
+
+/*agrupar selectores
+funciona para darle estilos a un conjunto por ejemplo este form queremos que tenga los mismos estilos*/
+
+.form-agrupar-selectores input[type="text"],
+.form-agrupar-selectores input[type="email"],
+.form-agrupar-selectores textarea {
+    border-color: yellow;
+    border-width: 2px;
+    border-style: dashed;
+    background-color: black;
+    font-size: 20px;
+    display: block;
+    width: 300px;
+}
+
+
+/*El algoritmo de CSS: es la forma en que el navegador aplica los estilos al documento
+HTML. es vital entender este concepto para que entiendas como se aplican y en algunas
+ocasiones se sobreescriben las reglas CSS
+1) la cáscada: es el mecanismo en que el navegador aplica los estilos. y toma en cuenta el siguiente orden.
+- el origen del codigo:
+- los estilos por defecto del navegador.
+- personalizaciones del usuario.
+- personalizaciones del autor.
+2) la especificidad del selector (cuando aplicas ambos estilos cual tiene mayor peso)
+3) orden de aparicion (a arriba hacia abajo osea el ultimo seria el escogido)
+*/

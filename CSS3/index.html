@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de CSS</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!--se pueden dar estilos internamente pero por buenas practicas en la hoja de estilos-->
+    <!--la propiedad scroll-behavior es para cambiar las animaciones dentro del html-->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        h1 {
+            color: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--la etiqueta article tiene un atributo id el cual es llamado por una etiqueta a href y un emoji que lleva al temario-css-->
+    <article id="temario-css">
+        <h1>aprendiendo CSS</h1>
+
+        <!--se pueden dar estilos en linea-->
+        <p><i style="font-weight: bold; color:brown;">Cascading Style Sheets</i>-Hojas de estilo en cascada</p>
+
+        <!--la etiqueta h2 tiene un atributo id-->
+        <h2> Temario del Curso</h2>
+
+        <!--para sacar una lista desordenada en lista con 5 mas a lu>li*5>a-->
+        <ul>
+            <li>
+                <a href="#selectores-basicos">selectores basicos</a>
+            </li>
+            <li>
+                <a href="#selectores-avanzados">selectores avanzados</a>
+            </li>
+            <li>
+                <a href="#pseudoclases">pseudo clases</a>
+            </li>
+            <li>
+                <a href="#pseudoelementos">pseudo elementos</a>
+            </li>
+            <li>
+                <a href="#agrupar-selectores">agrupar selectores</a>
+            </li>
+        </ul>
+    </article>
+
+
+    <!--el hr es una linea horizontal-->
+    <hr>
+
+    <!--la etiqueta article tiene un atributo id-->
+    <article id="selectores-basicos">
+        <h2>selectores basicos</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure similique eius nulla. Eveniet, facere architecto quibusdam culpa voluptatum sequi quo error nesciunt sapiente ducimus illo adipisci necessitatibus non, labore mollitia.</p>
+        <p id="parrafo-dos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A quos hic officia esse quia quisquam dolores labore numquam velit, laborum placeat! Quibusdam eum maiores voluptates delectus maxime. Nihil, corporis dolorem!</p>
+        <p class="text-32 bg-skyblue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit fuga doloremque esse ipsam rem placeat ipsum consequatur repellendus commodi fugiat animi at accusantium unde facere, optio, nisi omnis tempore aperiam?</p>
+        <p class="text-20 bg-steelblu text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab earum rem quos quod nihil architecto deserunt tempora laboriosam ullam rerum! Corrupti molestiae consequuntur harum rerum exercitationem officia quos corporis ea!</p>
+        <!--los estilos son llamados desde el css con sus atributos que fueron creados por clases-->
+        <p class="text-32 bg-steelblu text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo numquam dignissimos, dolore reprehenderit, molestiae voluptatem rerum velit atque quidem, fuga placeat. Consectetur vitae enim vel commodi soluta, explicabo cum dicta?</p>
+
+        <!--la etiqueta a href me lleva a una ruta dentro de la web con un emoji sacado de imoji org-->
+        <a href="#temario-css">☝️</a>
+    </article>
+
+    <hr>
+    <!--la etiqueta article tiene un id-->
+    <h2 id="selectores-avanzados">selectores avanzados</h2>
+    <h3>selectores de hijos</h3>
+    <h4>selector de hijos directos</h4>
+    <!--para crear una lista desordenada con 4 li y b ul>li*4>b-->
+    <ul class="hijos-directos">
+        <!--se le aplica un estilo de hijos directos porque esta en el primer nivel-->
+        <b>HOLA</b>
+        <li><b>Primavera</b></li>
+        <li><b>Verano</b></li>
+        <li><b>Otoño</b></li>
+        <li><b>Invierno</b></li>
+    </ul>
+    <h4>selector de hijos descendientes</h4>
+    <ul class="hijos-descendientes">
+        <li><b>Primavera</b></li>
+        <li><b>Verano</b></li>
+        <li><b>Otoño</b></li>
+        <li><b>Invierno</b></li>
+    </ul>
+    <h3>selector de hermanos</h3>
+    <h4>selector de hermanos en general</h4>
+    <ul>
+        <li><b>Primavera</b></li>
+        <li class="hermanos-general"><b>Verano</b></li>
+        <li><b>Otoño</b></li>
+        <li><b>Invierno</b></li>
+    </ul>
+    <h4>selector de hermanos adyacentes</h4>
+    <ul>
+        <li><b>Primavera</b></li>
+        <li><b>Verano</b></li>
+        <li class="hermanos-adyacentes"><b>Otoño</b></li>
+        <li><b>Invierno</b></li>
+    </ul>
+
+    <!--etiqueta h3 contenido selectores de atributos para crear una lista desordenada con 6 items y atributo a href y target ul>li*6>a[target=_blank] en codigo emmet-->
+    <!--nos van a permitir aplicar estilos tomando como referencia tomando cualquier atributo-->
+    <h3>selectores de atributos</h3>
+    <nav class="selectores-atributos">
+        <ul>
+            <li>
+                <a href="https://jonmircha.com" target="_blank">Inicio</a>
+            </li>
+            <li>
+                <a class="menu-item cursos button" href="https://jonmircha.com/cursos" target="_blank">Cursos</a>
+            </li>
+            <li>
+                <a href="http://jonmircha.com/blog" target="_blank">Blog</a>
+            </li>
+            <li>
+                <a href="https://jonmircha.com/cv" target="_blank">CV</a>
+            </li>
+            <li>
+                <a class="menu item ahora button" href="https://jonmircha.com/ahora" target="_blank">Ahora</a>
+            </li>
+            <li>
+                <a href="http://jonmircha.com/notas" target="_blank">Notas</a>
+            </li>
+            <li>
+                <a href="index.html" target="">Notas</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!--selector universal representado por un asterisco-->
+    <h3>selector universal (*)</h3>
+    <ul class="selector-universal">
+        <li><b>Primavera</b></li>
+        <li><b>Verano</b></li>
+        <li><b>Otoño</b></li>
+        <li><b>Invierno</b></li>
+    </ul>
+    <a href="#temario-css">☝️</a>
+    <hr>
+
+    <!--para crear una etiqueta article con un id en codigo emmet escribimos article#pseudoclases + tab-->
+    <article id="pseudoclases">
+        <h2>pseudo clases</h2>
+        <form class="form-pseudoclases">
+            <input type="text" name="nombre" placeholder="escribe tu nombre" required>
+            <br>
+            <input type="email" name="correo" placeholder="escribe tu correo" required>
+            <br>
+            <input type="submit">
+            <input type="submit" disabled>
+        </form>
+        <nav class="menu-pseudoclases">
+            <a href="#seccion1">seccion 1</a>
+            <a href="#seccion2">seccion 2</a>
+            <a href="#seccion3">seccion 3</a>
+            <a href="#seccion4">seccion 4</a>
+        </nav>
+        <p class="p-pseudaclases">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In totam at explicabo ipsa ducimus modi quia facere, unde, et nulla, ratione rerum! A autem animi maxime officiis dicta aspernatur minima.
+        </p>
+        <ol class="lista-pseudoclases">
+            <li>mu de aries</li>
+            <li>aldebaran de tauro</li>
+            <li>saga y kanon de geminis</li>
+            <li>death mask de cancer</li>
+            <li>aioria de leo</li>
+            <li>shaka de virgo</li>
+            <li>dohko de libra</li>
+            <li>milo de escorpion</li>
+            <li>aioros de sagitario</li>
+            <li>shura de capricornio</li>
+            <li>camus de acuario</li>
+            <li>afordita de piscis</li>
+        </ol>
+        <article class="articulo-pseudoclases">
+            <header>esto es una header</header>
+            <p>esto es un parrafo</p>
+            <div>esto es una div</div>
+            <p>esto es otro parrafo</p>
+            <section>esto es una section</section>
+            <p>esto es mas parrafo</p>
+            <div>esto es otra div</div>
+            <p>este es otro parrafo</p>
+            <footer>esto es un footer</footer>
+        </article>
+    </article>
+    <a href="#temario-css">☝️</a>
+    <hr>
+
+    <!--pseudo elementos-->
+    <article id="pseudoelementos">
+        <h2>pseudo elementos</h2>
+        <p>
+            <i>bandai myth cloth ex</i>
+            <span class="saga-geminis">Saga de geminis</span>
+            <span class="saga-precio">500</span>
+        </p>
+        <p class="p-pseudoelementos">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, quae esse? Vero deleniti eligendi soluta facilis explicabo cum eveniet quo minus, id numquam, ab ullam necessitatibus corporis autem? Nostrum, rem?
+        </p>
+
+        <input class="input-pseudoelementos" type="text" name="nombre" placeholder="escribe tu nombre">
+
+    </article>
+
+    <hr>
+    <a href="#temario-css">☝️</a>
+
+    <!--agrupar selectores-->
+    <article class="agrupar-selectores">
+        <h2>agrupar selectores</h2>
+        <form class="form-agrupar-selectores">
+            <input type="text" name="nombre" id="" placeholder="escribe tu nombre">
+            <input type="email" name="correo" id="" placeholder="escribe tu correo">
+            <textarea name="escribe tus comentarios" id="" placeholder="escribe tus comentarios" cols="30" rows="10"></textarea>
+            <input type="submit" value="mandar">
+        </form>
+        <a href="#temario-css">☝️</a>
+    </article>
+    <hr>
+
+    <!--algoritmos css-->
+    <article id="algoritmo-css">
+        <h2>el algoritmo de css</h2>
+        <ul>
+            <li>la cascada</li>
+            <li>la especificidad</li>
+            <li>la herencia</li>
+        </ul>
+        <a href="#temario-css">☝️</a>
+    </article>
+
+    <hr>
+    <a href="#temario-css">☝️</a>
+
+    <!--la etiqueta br es para dar saltos dentro de la web-->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+
+</html>

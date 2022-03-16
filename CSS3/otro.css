@@ -1,0 +1,9 @@
+h1 {
+    /*para darle un borde de color verdoso*/
+    border-color: greenyellow;
+    /*para darle un borde solido*/
+    border-style: solid;
+    /*para centrar el texto*/
+    text-align: center;
+}
+
