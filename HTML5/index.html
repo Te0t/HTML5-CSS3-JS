@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--cabeza del html-->
+
+<head>
+    <!--UTF-8 es el juego de caracteres universal estandar-->
+    <meta charset="UTF-8">
+    <!--esta etiqueta se utiliza para compatibilidad con los navegadores-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--viewport es la etiqueta que le dice a los dispositivos como adaptarse es super importante.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--title puede tener entre 55 y 65 caracteres-->
+    <title>CURSO hmtl</title>
+    <!--description es importante por que da la descripcion de nuestra web en los buscadores no mas de 165 caracteres-->
+    <meta name="description" content="esta es mi primera pagina de practica">
+    <!--estilos en html-->
+    <link rel="stylesheet" href="css/style.css">
+    <!--esta etiqueta ayuda al posicionamiento SEO canonical la cual indica al navegador la url mas importante por ejemplo una promoción-->
+    <link rel="canonical" href="http://tudominio.com/la-url-canonical">
+    <!--para añadir icono a tu web-->
+    <link rel="icon" href="https://img.icons8.com/fluency/48/000000/internet.png">
+    <!--para mostrar el icono en dispositivos moviles-->
+    <link rel="apple-touch-icon" href="https://img.icons8.com/fluency/48/000000/internet.png">
+    <!--esta meta etiqueta para cambiar el colo de barra en dispositivos moviles esta no es visible en web-->
+    <meta name="theme-color" content="#ff6600">
+
+</head>
+
+<!--cuerpo del html-->
+
+<body>
+    <!--los enlaces internos son aquellos que llevan a rutas dentro de la misma web-->
+    <h2>enlaces internos</h2>
+
+    <!--la etiquetas de enlaces se pueden añadir emojis, imagenes, y enlaces, o texto-->
+    <a href="index.html">☝️</a>
+
+    <ul>
+        <li>
+            <a href="#encabezados">Encabezados HTML</a>
+        </li>
+        <li>
+            <a href="#texto-basico">Etiquetas de Texto Basico</a>
+        </li>
+        <li>
+            <a href="#texto-semantico">Etiquetas de texto semanticas</a>
+        </li>
+        <li>
+            <a href="#etiquetas-saltos">Etiquetas de salto</a>
+        </li>
+        <li>
+            <a href="#etiquetas-estructuras">Etiquetas Estructurales</a>
+        </li>
+        <li>
+            <a href="#etiquetas-bloqueylinea">Etiquetas de bloques vs de lineas</a>
+        </li>
+        <li>
+            <a href="#imagenes">imagenes</a>
+        </li>
+        <li>
+            <a href="#figuras">figuras</a>
+        </li>
+        <li>
+            <a href="#listas-ordenadas">listas ordenadas</a>
+        </li>
+        <li>
+            <a href="#listas-desordenadas">listas desordenadas</a>
+        </li>
+        <li>
+            <a href="#listas-definicion">Lsitas de Definición</a>
+        </li>
+        <li>
+            <a href="#tablas">Tablas</a>
+        </li>
+        <li>
+            <a href="#enlaces">enlaces</a>
+        </li>
+        <li>
+            <a href="#enlaces-especiales">enlaces especiales</a>
+        </li>
+        <li>
+            <a href="#elementos-interactivos">elementos interactivos</a>
+        </li>
+        <li>
+            <a href="#elementos-audioyvideo">elementos de audio y video</a>
+        </li>
+        <li>
+            <a href="#iframes">iframes</a>
+        </li>
+        <li>
+            <a href="#data-attributes">data attributes</a>
+        </li>
+        <li>
+            <a href="#metas-seo">posicionamiento SEO</a>
+        </li>
+        <a href="index.html">☝️</a>
+    </ul>
+
+    <h2 id="enlaces-especiales">Enlaces especiales</h2>
+    <a href="emailto:harley.taberner@correo.policia.gov.co">enlace a correo electronico</a>
+    <br>
+    <a href="tel:+573217537947">enlace mi numero</a>
+    <br>
+    <!--creamos un enlace que nos lleve a whatsapp con un mensaje automatico-->
+    <a href="https://api.whatsapp.com/send?phone=573217537947&text=hola" target="_blank">enlace de whatsapp</a>
+
+    <hr>
+    <!--primer parrafo html-->
+    <p>hola, escribiendo mi primer parrafo en documento html</p>
+    <p>este es un parrafo</p>
+    <a href="index.html">☝️</a>
+
+    <hr>
+    <!--etiquetas de encabezado por niveles se recomienda solo una h1 en la web-->
+    <h2 id="encabezados">Encabezado HTML</h2>
+    <h1>encabezado de nivel 1</h1>
+    <h2>encabezado de nivel 2</h2>
+    <h3>encabezado de nivel 3</h3>
+    <h4>encabezado de nivel 4</h4>
+    <h5>encabezado de nivel 5</h5>
+    <h6>encabezado de nivel 6</h6>
+    <a href="index.html">☝️</a>
+
+    <hr>
+    <h2>Parrafo</h2>
+    <!--texto predeterminado para rellenar campos de texto-->
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae eum officia rem hic, ipsa pariatur reprehenderit saepe earum laborum nobis? Neque rerum quod, suscipit nisi fuga laborum modi repellendus debitis.</p>
+    <a href="index.html">☝️</a>
+
+    <hr>
+    <!--etiquetas de texto básicas-->
+    <h2 id="texto-basico">Etiquetas de texto basicas</h2>
+
+    <p>
+        <b>negrita</b>, <i>cursiva</i>, <u>subrayado</u>, e=mc<sup>2</sup>, H
+        <sub>2</sub>O, <mark>marcado o seleccionado</mark> <small>letras pequeñas</small>
+    </p>
+    <a href="index.html">☝️</a>
+
+    <!--etiquetas de texto semanticas-->
+    <hr>
+    <h2 id="texto-semantico">Etiquetas de semantica</h2>
+
+    <p>
+        <strong>este texto es importante</strong>
+        <!--esta etiqueta blockquote y cite se utiliza para citar un texto importante y su autor-->
+        <blockquote> yo sólo sé, que nada sé </blockquote>
+        <cite>sócrates</cite>
+    </p>
+    <a href="index.html">☝️</a>
+
+    <!--la etiqueta hr es para separar secciones con una linea horizontal-->
+    <hr>
+    <h2 id="etiquetas-saltos">Etiquetas de salto</h2>
+
+    <!--al parrafo se le añade la etiqueta br para dar un salto en el texto de un tab-->
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere dolor ea at, <br> expedita corrupti velit quod, nulla repudiandae est dolore necessitatibus optio modi impedit dignissimos eaque temporibus, ab sed provident?</p>
+
+    <h2>Etiquetas para dar formato</h2>
+    <p>
+        <pre>
+    Tareas por hacer
+        -terminar de realizar las secciones del curso
+            -editar y practicar
+        -comenzar css
+            -editar y practicar
+        </pre>
+        <pre>&lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+              &lt;head&gt;
+                &lt;title&gt;Hello World&lt;/title&gt;
+              &lt;/head&gt;
+              &lt;body&gt;
+                &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra nec nulla vitae mollis.&lt;/p&gt;
+              &lt;/body&gt;
+            &lt;/html&gt;</pre>
+    </p>
+    <a href="index.html">☝️</a>
+
+    <hr>
+    <h2 id="etiquetas-estructuras">Etiquetas semanticas estructurales</h2>
+
+    <div> div - Es una etiqueta contenedora que no tiene semantica</div>
+    <header>header - es una etiqueta de cabecera de un sitio web o de una sección</header>
+    <main>main - define la seccion principal del documento, solo puede existir una etiqueta main por documento</main>
+    <footer>footer - esta etiqueta representa el pie de pagina de una web</footer>
+    <nav>nav - la etiqueta nav representa un conjunto de enlaces o barra de navegacion botoneras</nav>
+    <article>article - representa una sección autocontenido (que se explica por si sola)</article>
+    <aside>aside - representa contenido complemento o secundario</aside>
+    <section>section - representa una sección de contenido generico</section>
+    <address>address - representa una dirección fisica</address>
+    <a href="index.html">☝️</a>
+
+    <hr>
+    <h2 id="etiquetas-bloqueylinea">Etiquetas de bloque VS etiquetas de línea</h2>
+    <div style="background-color: yellow;">es la etiqueta de bloque por excelencia, una etiqueta de bloque es aquella que genera saltos de linea con sus etiquetas hermanas arriba y abajo, el div ocupa todo el ancho del contenido</div>
+    <span style="background-color: aqua;">es la etiqueta enlinea por excelencia, una etiqueta de linea solo ocupa el espacio necesario de su contenido</span>
+    <span>la etiqueta span no hace saltos de linea ni arriba de abajo</span>
+    <br>
+    <a href="index.html">☝️</a>
+
+    <hr>
+    <!--la etiqueta imagenes el src es la ruta donde esta la imagen y alt el nombre, se le puede añadir el ancho y alto pero lo recomendable es en el css-->
+    <h2 id="imagenes">imagenes</h2>
+    <img src="img/dados.png" alt="tabla">
+    <img src="img/minion.jpg" alt="minions">
+    <img src="img/gato.gif" alt="gatico">
+    <img src="img/peluche.svg" alt="peluche">
+    <a href="index.html">☝️</a>
+
+    <hr>
+    <h2 id="figuras">figuras</h2>
+    <!--las figuras se utilizan para darle una referencia semantica a la imagen como por ejemplo en un libro referencia imagen 1 dados de hule-->
+    <figure>
+        <img src="img/minion.jpg" alt="dados">
+        <figcaption>imagen de referencia dados</figcaption>
+    </figure>
+    <a href="index.html">☝️</a>
+
+    <hr>
+    <!--listas ordenadas ORDER LIST-->
+    <h2 id="listas-ordenadas">Listas ordenadas</h2>
+    <h3>las estaciones del año</h3>
+    <ol>
+        <li>primavera</li>
+        <li>verano</li>
+        <li>otoño</li>
+        <li>invierno</li>
+    </ol>
+    <!--esta lista ordenada se le añadio el atributo start para contar a partir de 5-->
+    <ol start="5">
+        <li>primavera</li>
+        <li>verano</li>
+        <li>otoño</li>
+        <li>invierno</li>
+    </ol>
+    <!--esta lista ordenada se le añadio un atributo boleano el cual invierte el orden-->
+    <ol reversed>
+        <li>primavera</li>
+        <li>verano</li>
+        <li>otoño</li>
+        <li>invierno</li>
+    </ol>
+    <!--esta lista ordenada se le añade un atributo type que da el tipo de letra o numero-->
+    <ol type="A">
+        <li>primavera</li>
+        <li>verano</li>
+        <li>otoño</li>
+        <li>invierno</li>
+    </ol>
+    <a href="index.html">☝️</a>
+
+    <hr>
+    <!--listas desordenadas UNORDER LIST-->
+    <h2 id="listas-desordenadas">listas desordenadas</h2>
+    <h3>cosas por hacer</h3>
+    <ul>
+        <li>terminar el curso</li>
+        <li>practicar</li>
+        <li>practicar</li>
+    </ul>
+    <!--igual aqui tambien se puede usar el atributo type-->
+    <ul type="circle">
+        <li>terminar el curso</li>
+        <li>practicar</li>
+        <li>practicar</li>
+    </ul>
+    <ul type="square">
+        <li>terminar el curso</li>
+        <li>practicar</li>
+        <li>practicar</li>
+    </ul>
+    <a href="index.html">☝️</a>
+
+    <hr>
+    <h2 id="listas-definicion">listas de definición</h2>
+    <!--definition list-->
+    <dl>
+        <!--definition term (termino a definir)-->
+        <dt>HTML</dt>
+        <!--definition data (dato a definir)-->
+        <dd>Es un lenguaje de marcado que define el contenido de la web</dd>
+        <dt>CSS</dt>
+        <dd>Es un lenguaje de definición que da estilos al codigo HTML</dd>
+        <dt>Javascript</dt>
+        <dd>Es el lenguaje de la web</dd>
+    </dl>
+    <a href="index.html">☝️</a>
+
+    <hr>
+    <h2 id="tablas">tablas</h2>
+    <!--las tablas estan conformadas por filas y columnas asi tr(table row) dentro celda td(table data)-->
+    <table>
+        <tr>
+            <td>Nombre</td>
+            <td>Constelación</td>
+            <td>Tipo</td>
+        </tr>
+        <tr>
+            <td>ikki</td>
+            <td>fenix</td>
+            <td>bronce</td>
+        </tr>
+        <tr>
+            <td>shaina</td>
+            <td>ofiuco</td>
+            <td>plata</td>
+        </tr>
+        <tr>
+            <td>saga</td>
+            <td>geminis</td>
+            <td>dorado</td>
+        </tr>
+    </table>
+    <a href="index.html">☝️</a>
+
+    <hr>
+    <!--thead, tbody, tfoot, sirven para elaborar tablas de filas agrupadas o mejor extructuradas-->
+    <table>
+        <thead>
+            <tr>
+                <!--con el atributo colspan es para ocupar el numero de celdas-->
+                <th colspan="3">tabla de los santos de athena</th>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <th>Constelación</th>
+                <th>tipo</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>ikki</td>
+                <td>fenix</td>
+                <td>bronce</td>
+            </tr>
+            <tr>
+                <td>shaina</td>
+                <td>ofiuco</td>
+                <td>plata</td>
+            </tr>
+            <tr>
+                <td>saga</td>
+                <td>geminis</td>
+                <td>dorado</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th colspan="3">saint seiya fue creado por masami kuruma </th>
+            </tr>
+        </tfoot>
+    </table>
+    <a href="index.html">☝️</a>
+
+    <hr>
+    <h2 id="enlaces">enlaces</h2>
+    <!--los enlaces son etiquetas en linea por eso hay que separarlos con saltos o separadores recuerda que para enlazar paginas externas debe ir el url con https-->
+    <a href="hola.html">hacia la pagina Hola</a>
+    <br>
+    <!--cuando se trabaja con enlaces externos para abrir en otras paginas se utiliza el atributo target-->
+    <a href="https://www.google.com/?hl=es" target="_blank">google</a>
+    <br>
+    <a href="index.html">☝️</a>
+
+    <hr>
+    <!--en los enlaces se puede añadir una imagen con una ruta especifica-->
+    <a href="https://www.facebook.com/" target="_blank">
+        <img src="img/dados.png" alt="ir hacia facebook.com">
+    </a>
+    <br>
+    <a href="index.html">☝️</a>
+
+    <hr>
+
+    <!--elementos interactivos es una mala practica meter js en una etiqueta-->
+    <h2 id="elementos-interactivos">elementos interactivos</h2>
+    <button onclick="alert('Diste click en el boton')">este es un boton</button>
+    <br>
+    <a href="index.html">☝️</a>
+
+    <!--elementos de acordion se forman por tres elementos details, summary, dentro puede ir article, div, a, p-->
+    <details>
+        <summary>titulo del acordeon</summary>
+        <article>
+            <h3>contenido del acordeon</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A quam at voluptatum molestiae enim beatae tempore quas reiciendis? Tempore, laborum quae. Eius quasi vitae perferendis dolore nesciunt itaque dolorem repellendus.</p>
+            <img src="img/minion.jpg" alt="minions">
+        </article>
+    </details>
+
+    <!--elemento acordeon abierto-->
+    <details open>
+        <summary>titulo del acordeon</summary>
+        <article>
+            <h3>contenido del acordeon</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A quam at voluptatum molestiae enim beatae tempore quas reiciendis? Tempore, laborum quae. Eius quasi vitae perferendis dolore nesciunt itaque dolorem repellendus.</p>
+            <img src="img/minion.jpg" alt="minions">
+        </article>
+    </details>
+
+    <!--Ventana modal que se abre como si fuera otro navegador apenas se esta implementando-->
+    <dialog open>
+        esto es una ventana modal
+    </dialog>
+
+    <hr>
+
+    <!--elementos de audio y video-->
+    <h2 id="elementos-audioyvideo">Audio y video</h2>
+
+    <audio src="audio/y2mate.com - Video de motivación corto.mp3" controls>las etiquetas de audio son invisibles por eso se añade el boleano controls</audio>
+    <a href="index.html">☝️</a>
+    <br>
+    <!--en los elementos video se añade el boleano controls preload y el poster es para visualizar una imagen antes de reproducir el video-->
+    <video src="video/video-insert.mp4" controls preload poster="img/minion.jpg"></video>
+
+    <hr>
+    <!--los iframe son una previsualizar de un pagina o video en internet-->
+    <h2 id="iframes">iframes</h2>
+    <iframe src="hola.html" frameborder="1"></iframe>
+    <br>
+    <!--no todos los iframe pueden tomar el link de referencia por seguridad-->
+    <iframe src="https://www.facebook.com/" frameborder="1"></iframe>
+    <!--en los iframe tambien podemos visualizar documentos pdf-->
+    <iframe src="cheatsheet-a5.pdf" frameborder="1"></iframe>
+    <!--tambien podemos agregar mapas en los iframes-->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.7023101249233!2d-74.09896270816792!3d4.647088988441872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9bbf81b44f83%3A0xcf381fcab622130c!2sDirecci%C3%B3n%20General%20de%20la%20Polic%C3%ADa%20Nacional%20-%20DIPON!5e0!3m2!1ses!2sco!4v1646144846136!5m2!1ses!2sco"
+        width="600" height="450" style="border: 1px;;" allowfullscreen="" loading="lazy"></iframe>
+    <hr>
+
+    <h2 id="formularios">formularios</h2>
+    <h3>elmentos de formularios</h3>
+    <!--los elementos de formularios esta el input tales como el de texto, de checkeo, radio, fecha, color-->
+    <input type="text">
+    <br>
+    <!--etiqueta de seleccion tipo caja-->
+    <input type="checkbox">
+    <br>
+    <!--etiqueta de seleccion tipo radio-->
+    <input type="radio">
+    <br>
+    <!--etiqueta de fecha-->
+    <input type="date">
+    <br>
+    <!--etiqueta de paleta de colores-->
+    <input type="color">
+    <br>
+    <!--etiqueta de boton-->
+    <input type="button" value="Boton">
+    <br>
+    <!--etiqueta de boton enviar-->
+    <input type="submit" value="enviar">
+    <br>
+    <!--etiqueta para restablecer un formulario-->
+    <input type="reset" value="restablecer">
+    <br>
+    <!--etiqueta para cargar archivos-->
+    <input type="file" name="" id="">
+    <br>
+    <!--para cargar varios archivos se añade el boleano multiple-->
+    <input type="file" multiple>
+    <br>
+    <!--etiqueta de tipo email-->
+    <input type="email" name="email" id="" value="email">
+    <br>
+    <!--etiqueta de tipo numero-->
+    <input type="number" name="" id="">
+    <br>
+    <!--etiqueta de tipo telefono-->
+    <input type="tel" value="celular">
+    <br>
+    <!--etiqueta para crear caja de texto para comentarios-->
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <br>
+    <!--etiqueta de elementos para escoger o lista de seleccion lleva por dentro la etiqueta option que son las opciones-->
+    <select name="" id="">
+        <option value="">html</option>
+        <option value="">CSS</option>
+        <option value="">js</option>
+    </select>
+    <br>
+    <!--se añade el boleano multiple para hacer seleccion multiple-->
+    <select name="" id="" multiple>
+        <option value="">html</option>
+        <option value="">CSS</option>
+        <option value="">js</option>
+    </select>
+    <br>
+
+    <!--atributos de formularios y inputs-->
+    <!--se crea una casilla sin seleccion ni edicion-->
+    <input type="text" value="harley" readonly disabled>
+    <br>
+    <!--la atributo placeholder es para crear un texto al fondo como ejemplo-->
+    <input type="text" placeholder="escribe tu nombre">
+    <br>
+    <h3>ejemplo de formularios</h3>
+    <h4>formulario de login</h4>
+    <!--esta crea una url a donde enviar el input los method get publico y post privado el autocomplete es para evitar que se salga la ventana de autocompletar-->
+    <form action="https//harley.com/" method="post" autocomplete="off">
+        <label for="usuario">Usuario:</label>
+        <!--el atributo pattern es para solicitar que la contraseña o el usuario debe llevar letras mayusculas o minusculas y no numeros -->
+        <input type="text" name="usuario" id="usuario" placeholder="escribe tu usuario" pattern="^[A-Za-z]+$" title="el campo solo acepta letras" required>
+        <br>
+        <!--la etiqueta label es para que el cursor te lleve a la casilla y cree el titulo de la casilla-->
+        <label for="password">password:</label>
+        <!--el boleano required es para no enviar campos vacios-->
+        <input type="password" name="password" id="password" placeholder="escribe tu contraseña" required>
+        <br>
+        <input type="submit">
+        <br>
+        <input type="reset">
+    </form>
+
+
+    <!--El Elemento HTML <label> representa una etiqueta para un elemento en una interfaz de usuario. Este puede estar asociado con un control ya sea mediante la utilizacion del atributo for, o ubicando el control dentro del elemento label. Tal control es llamado "el control etiquetado" del elemento label.-->
+    <h4>selects, radios y checkbox</h4>
+    <form>
+        <label>
+        <p>elige tu idioma</p>
+        <select name="idioma" required>
+            <option value="">elige una opcion</option>
+            <option value="es">español</option>
+            <option value="en">ingles</option>
+            <option value="fr">frances</option>
+            <option value="it">italiano</option>
+            <option value="pt">portugues</option>
+            </select>
+
+            
+        <p>elige tu lenguaje de programacion favorito</p>
+        <input type="radio" name="lenguaje" id="radio-js" value="js">
+        <label for="radio-js">Javascript</label>
+        <input type="radio" name="lenguaje" id="radio-Jv" value="Jv" checked>
+        <label for="radio-jv">Java</label>
+        <input type="radio" name="lenguaje" id="radio-py" value="py">
+        <label for="radio-py">Python</label>
+
+        <p>elige tus intereses</p>
+        <label><input type="checkbox" name="intereses-dep" value="deportes">deportes</label>
+        <label><input type="checkbox" name="intereses-fin" value="finanzas">finanzas</label>
+        <label><input type="checkbox" name="intereses-sal" value="salud" checked>salud</label>
+        <label><input type="checkbox" name="intereses-pol" value="politica">politica</label>
+        <label><input type="checkbox" name="intereses-eco" value="ecologia">ecologia</label>
+        <br>
+        <label><input type="checkbox" required>¿Aceptas terminos y condiciones?</label>
+        <input type="submit">
+        <input type="reset">
+    </form>
+    <br>
+    <h4>ejemplo de formulario de contacto</h4>
+    <form action="https://formsubmit.co/phirutaberner@gmail.com" method="post">
+        <input type="text" name="nombre" placeholder="escribe tu nombre" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Nombre solo acepta letras y espacios en blanco" required>
+        <br>
+        <input type="email" name="correo" placeholder="escribe tu correo" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" title="correo no valido" required>
+        <br>
+        <textarea name="comentarios" id="" cols="30" rows="10"></textarea>
+        <br>
+        <input type="submit" value="enviar">
+        <br>
+        <a href="index.html">☝️</a>
+    </form>
+    <hr>
+
+    <!--el proposito principal es crear atributos con id personalizados-->
+    <h2 id="data-attributes">data attributes</h2>
+    <ul>
+        <li data-id="1" data-name="spring">Primavera</li>
+        <li data-id="2" data-name="summer">Verano</li>
+        <li data-id="3" data-name="autumn">Otoño</li>
+        <li data-id="4" data-name="winter">Invierno</li>
+    </ul>
+    <a href="index.html">☝️</a>
+    <hr>
+
+    <!--las meta etiquetas para posicionamiento SEO-->
+    <h2 id="metas-seo">Meta etiquetas SEO</h2>
+    <p>las etiquetas de posicionamiento tenemos el title, meta name, link rel canonical</p>
+    <h3>ejemplo etiquetas open graph para redes sociales</h3>
+    <img src="img/ogtags.jpg" alt="">
+    <a href="index.html">☝️</a>
+    <h4>ejemplo meta etiquetas de redes sociales que debes aplicar a tu wev</h4>
+    <meta property="og:tittle" content="Aprendiendo HTMl">
+    <meta property="og:description" content="En esta pagina estamos aprendiendo HTML">
+    <meta property="og:image" content="https://tuweb.com/img/minios.jpg">
+    <meta property="og:url" content="https://tuweb.com/index.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@te0t">
+    <hr>
+
+    <!--accesibilidad web mecanismos para personas que tienen ciertas discapacidades-->
+    <h2 id="accesibilidad">accesibilidad web</h2>
+    <!--para hacer una lista desordenada con 4 puntos siguienta atajo mas tab lu>li*4-->
+    <!--Si una página utiliza los atributos "role" para describir el propósito de cada elemento, la navegación de esas personas será mucho más agradable, ya que su navegador especial es capaz de "entender" cómo está creada la página y puede leer los contenidos al usuario de manera mucho más lógica.-->
+    <!--cuando se le añade el atributo tabindex es para que sin necesidad de usar el mouse se pueda navegar por la pagina aquellas etiquetas que tienen el atributo-->
+    <h3 role="title">las estaciones del año</h3>
+    <ul role="list">
+        <li role="listitem">Primavera</li>
+        <li role="listitem">verano</li>
+        <li role="listitem">otoño</li>
+        <li role="listitem">invierno</li>
+    </ul>
+    <a role="link" aria-label="En este enlace encontraras mas informacion sobre las estaciones del año" href="#" target="_blank">mas información...</a>
+
+
+
+    <br><br><br><br><br><br>
+
+
+
+
+
+
+
+    <script src="js/script.js "></script>
+</body>
+
+</html>

@@ -1,0 +1,1 @@
+console.log("Aprendiendo como invocar codigo JS desde HTML")
