@@ -425,3 +425,26 @@ la especificidad es el peso que tiene un selector cuando hay conflicto de estilo
 blockquote {
     background-color: burlywood;
 }
+
+
+/*por especifidad se aplica este estilo por el peso de especifidad y no por cascada hay que tener en cuenta que los estilos en linea tienes mayor peso*/
+
+blockquote#cita-marco.cita-marco {
+    background-color: lightsteelblue;
+}
+
+blockquote#cita-marco {
+    background-color: lightsalmon;
+}
+
+#cita-marco {
+    background-color: lightgreen;
+}
+
+blockquote.cita-marco {
+    background-color: tomato;
+}
+
+.cita-marco {
+    background-color: cornflowerblue;
+}
