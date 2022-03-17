@@ -15,6 +15,10 @@ Dentro del modelo de caja hay que considerar que una caja tendras 4 lados en bas
 
 */
 
+body {
+    margin: 0;
+}
+
 
 /*esto es una caja en el h1 ver css reference*/
 
@@ -29,4 +33,14 @@ h1 {
     border-style: solid;
     /*se puede simplificar segun las necesidades*/
     border: 2px dashed darkblue;
+}
+
+.caja-uno,
+.caja-dos {
+    background-color: chocolate;
+    border: medium solid orange;
+    padding: 20px;
+    /*recordemos que el padding son las distancias internas del borde al contenido*/
+    /*margin: 20px;*/
+    /*recordemos que el margin son las distancias externas*/
 }
