@@ -15,7 +15,12 @@ Dentro del modelo de caja hay que considerar que una caja tendras 4 lados en bas
 
 */
 
+
+/*esto es una caja en el h1*/
+
 h1 {
+    width: 400px;
+    height: 200px;
     border-width: 3px;
     border-style: solid;
 }
