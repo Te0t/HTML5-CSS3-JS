@@ -429,6 +429,10 @@ blockquote {
 
 /*por especifidad se aplica este estilo por el peso de especifidad y no por cascada hay que tener en cuenta que los estilos en linea tienes mayor peso*/
 
+.cita-marco {
+    background-color: mediumaquamarine !important;
+}
+
 blockquote#cita-marco.cita-marco {
     background-color: lightsteelblue;
 }
@@ -447,4 +451,31 @@ blockquote.cita-marco {
 
 .cita-marco {
     background-color: cornflowerblue;
+}
+
+
+/*por cascada toma este estilo el cual fue definido al final recuerda que es una mala practica*/
+
+.cita-marco {
+    background-color: moccasin !important;
+    background-color: darkorange !important;
+    font-size: 32px;
+    border-style: dashed;
+    border-color: red;
+}
+
+
+/*la herencia, es la capacidad de un selector de obtener (heredar) los valores de sus ancestros más cercanos, 
+para aplicarla se usa el calor inherit, si queremos evitarla podemos asignar otro valor o 
+inicializar la propiedad en cuestion con el valor initial
+-el borde no se hereda
+-el fondo no se hereda https://web.dev/learn/css/inheritance/#which-properties-are-inheritable*/
+
+.cita-marco cite {
+    background-color: palevioletred;
+    background-color: inherit;
+    font-size: 24px;
+    font-size: initial;
+    border-style: inherit;
+    border-color: inherit;
 }
