@@ -16,11 +16,17 @@ Dentro del modelo de caja hay que considerar que una caja tendras 4 lados en bas
 */
 
 
-/*esto es una caja en el h1*/
+/*esto es una caja en el h1 ver css reference*/
 
 h1 {
     width: 400px;
     height: 200px;
-    border-width: 3px;
+    /*Propiedades tipo shorthand*/
+    border-color: green;
+    border-top-color: red;
+    border-width: medium;
+    /*thin: 1px, medium: 3px, thick: 5px*/
     border-style: solid;
+    /*se puede simplificar segun las necesidades*/
+    border: 2px dashed darkblue;
 }
