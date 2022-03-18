@@ -41,6 +41,28 @@ h1 {
     border: medium solid orange;
     padding: 20px;
     /*recordemos que el padding son las distancias internas del borde al contenido*/
-    /*margin: 20px;*/
+    margin: 20px;
     /*recordemos que el margin son las distancias externas*/
+    /*
+    Esto aplica para margin y padding
+    * un valor aplica a los 4 lados
+    * dos valores 
+    - el primer valor es para los lados verticales (top y bottom)
+    - el segundo valor es para los lados horizontales (left y rigth)
+    * tres valores
+    - primer valor es para top.
+    - el segundo valor es para los horizontales left y right.
+    - tercer valor es para bottom.
+    * cuatro valores piensa en las manecillas del reloj
+    - primer valor top (12)
+    - segundo valor es para right (3)
+    - tercer valor es bottom (6)
+    - cuarto valor es Left (9)
+    */
+    padding: 20px 40px;
+    margin: 40px 20px;
+    padding: 0 40px 20px;
+    margin: 50px 30px 0;
+    padding: 0 40px 20px 50px;
+    margin: 100px 50px 30px 0;
 }
