@@ -1,4 +1,4 @@
-/*
+    /*
 
 Modelo de Caja. es la forma en que CSS ve a los elementos HTMl ¿y como los ve?
 como si fueran cajas con las siguientes propiedades
@@ -14,36 +14,34 @@ Dentro del modelo de caja hay que considerar que una caja tendras 4 lados en bas
 4 izquierda (left)
 
 */
-
-body {
-    margin: 0;
-}
-
-
-/*esto es una caja en el h1 ver css reference*/
-
-h1 {
-    width: 400px;
-    height: 200px;
-    /*Propiedades tipo shorthand*/
-    border-color: green;
-    border-top-color: red;
-    border-width: medium;
-    /*thin: 1px, medium: 3px, thick: 5px*/
-    border-style: solid;
-    /*se puede simplificar segun las necesidades*/
-    border: 2px dashed darkblue;
-}
-
-.caja-uno,
-.caja-dos {
-    background-color: chocolate;
-    border: medium solid orange;
-    padding: 20px;
-    /*recordemos que el padding son las distancias internas del borde al contenido*/
-    margin: 20px;
-    /*recordemos que el margin son las distancias externas*/
-    /*
+    
+    body {
+        margin: 0;
+    }
+    /*esto es una caja en el h1 ver css reference*/
+    
+    h1 {
+        width: 400px;
+        height: 200px;
+        /*Propiedades tipo shorthand*/
+        border-color: green;
+        border-top-color: red;
+        border-width: medium;
+        /*thin: 1px, medium: 3px, thick: 5px*/
+        border-style: solid;
+        /*se puede simplificar segun las necesidades*/
+        border: 2px dashed darkblue;
+    }
+    
+    .caja-uno,
+    .caja-dos {
+        background-color: chocolate;
+        border: medium solid orange;
+        padding: 20px;
+        /*recordemos que el padding son las distancias internas del borde al contenido*/
+        margin: 20px;
+        /*recordemos que el margin son las distancias externas*/
+        /*
     Esto aplica para margin y padding
     * un valor aplica a los 4 lados
     * dos valores 
@@ -59,16 +57,14 @@ h1 {
     - tercer valor es bottom (6)
     - cuarto valor es Left (9)
     */
-    padding: 20px 40px;
-    margin: 40px 20px;
-    padding: 0 40px 20px;
-    margin: 50px 30px 0;
-    padding: 0 40px 20px 50px;
-    margin: 100px 50px 30px 0;
-}
-
-
-/*
+        padding: 20px 40px;
+        margin: 40px 20px;
+        padding: 0 40px 20px;
+        margin: 50px 30px 0;
+        padding: 0 40px 20px 50px;
+        margin: 100px 50px 30px 0;
+    }
+    /*
 Caja de linea EJEMPLO LINEA 84 CSS esto aplica para todos las etiquetas en linea
     -Ocupan el espacio necesario para mostrar su contenido.
     -No tienen dimensiones modificables (alto, ancho).
@@ -80,27 +76,25 @@ caja de Bloque
     -No permiten otro elementos a su lado(aunque especifique un ancho, siguen ocupando 
     -todo el espacio disponible a lo ancho generando saltos de linea).
 */
-
-.caja-linea,
-.caja-bloque {
-    background-color: darkcyan;
-    width: 500px;
-    height: 250px;
-    border: medium solid black;
-    padding: 16px;
-    margin: 0 32px;
-}
-
-.caja-bloque {
-    margin: 32px;
-}
-
-.caja-linea {
-    margin: 48px;
-}
-
-
-/*La propiedad display tiene lo siguiente
+    
+    .caja-linea,
+    .caja-bloque {
+        background-color: darkcyan;
+        width: 500px;
+        height: 250px;
+        border: medium solid black;
+        padding: 16px;
+        margin: 0 32px;
+    }
+    
+    .caja-bloque {
+        margin: 32px;
+    }
+    
+    .caja-linea {
+        margin: 48px;
+    }
+    /*La propiedad display tiene lo siguiente
     -inline
     -block
     -inline-block - se comporta como un elemento de linea pero acepta modificar sus dimensiones (alto y ancho).
@@ -110,40 +104,83 @@ caja de Bloque
     -flex
     -grid
 */
-
-.caja-none,
-.caja-linea-bloque,
-.caja-hidden {
-    background-color: greenyellow;
-    color: black;
-    width: 600px;
-    height: 300px;
-    border: medium solid black;
-}
-
-.caja-linea-bloque {
-    display: inline-block;
-}
-
-.caja-none {
-    display: none;
-}
-
-
-/*Esta propiedad no hace que desaparezca como la de display none si no que no lo hace visible pero si ocupa el espacio*/
-
-.caja-hidden {
-    visibility: hidden;
-}
-
-.overflow {
-    background-color: darkturquoise;
-    width: 200px;
-    height: 100px;
-    overflow: visible;
-    overflow: hidden;
-    overflow: scroll;
-    overflow: auto;
-    /*overflow-y: scroll;
+    
+    .caja-none,
+    .caja-linea-bloque,
+    .caja-hidden {
+        background-color: greenyellow;
+        color: black;
+        width: 600px;
+        height: 300px;
+        border: medium solid black;
+    }
+    
+    .caja-linea-bloque {
+        display: inline-block;
+    }
+    
+    .caja-none {
+        display: none;
+    }
+    /*Esta propiedad no hace que desaparezca como la de display none si no que no lo hace visible pero si ocupa el espacio*/
+    
+    .caja-hidden {
+        visibility: hidden;
+    }
+    
+    .overflow {
+        background-color: darkturquoise;
+        width: 200px;
+        height: 100px;
+        overflow: visible;
+        overflow: hidden;
+        overflow: scroll;
+        overflow: auto;
+        /*overflow-y: scroll;
     overflow-x: scroll;*/
-}
+    }
+    /*
+Tamaño de caja
+*/
+    
+    .box-sizing-content,
+    .box-sizing-border {
+        background-color: deepskyblue;
+        box-sizing: content-box;
+        width: 500px;
+        height: 250px;
+        padding: 10px;
+        border: thick solid black;
+    }
+    
+    .box-sizing-border {
+        box-sizing: border-box;
+    }
+    
+    .container-col-3 {
+        background-color: burlywood;
+        width: 600px;
+        height: 300px;
+        margin-top: 20px;
+    }
+    
+    .container-col-3>* {
+        box-sizing: border-box;
+        width: 200px;
+        border: thin solid red;
+        padding: 10px;
+        float: left;
+    }
+    /* https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+    apply a natural box layout model to all elements, but allowing components to change
+    */
+    
+    html {
+        box-sizing: border-box;
+    }
+    
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherent;
+    }
