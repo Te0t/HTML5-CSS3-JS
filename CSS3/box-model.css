@@ -184,3 +184,20 @@ Tamaño de caja
     *:after {
         box-sizing: inherent;
     }
+    /*Floats*/
+    
+    .container-floats {
+        background-color: cornflowerblue;
+    }
+    
+    .float-left {
+        float: left;
+    }
+    
+    .float-right {
+        float: right;
+    }
+    
+    .clearfix {
+        clear: both;
+    }
