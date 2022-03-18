@@ -66,3 +66,38 @@ h1 {
     padding: 0 40px 20px 50px;
     margin: 100px 50px 30px 0;
 }
+
+
+/*
+Caja de linea EJEMPLO LINEA 84 CSS esto aplica para todos las etiquetas en linea
+    -Ocupan el espacio necesario para mostrar su contenido.
+    -No tienen dimensiones modificables (alto, ancho).
+    -Permiten otros elementos a su lado.
+    -Padding y margin solo empujan a elementos adyacentes en horizontal, nunca en vertical.
+caja de Bloque
+    -Ocupan todo el ancho disponible, lo que genera saltos de linea.
+    -Tienen dimensiones modificables (alto, ancho)
+    -No permiten otro elementos a su lado(aunque especifique un ancho, siguen ocupando 
+    -todo el espacio disponible a lo ancho generando saltos de linea).
+*/
+
+.caja-linea,
+.caja-bloque {
+    background-color: darkcyan;
+    width: 500px;
+    height: 250px;
+    border: medium solid black;
+    padding: 16px;
+    margin: 0 32px;
+}
+
+.caja-bloque {
+    margin: 32px;
+}
+
+.caja-linea {
+    margin: 48px;
+}
+
+
+/**/
