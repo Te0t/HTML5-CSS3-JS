@@ -201,3 +201,33 @@ Tamaño de caja
     .clearfix {
         clear: both;
     }
+    /*colapso de margenes verticales*/
+    
+    .margin-collapse {
+        background-color: skyblue;
+    }
+    /*con esta propiedad los estilos de margin se superponen uno sobre otro menos es de abajo*/
+    
+    .margin-collapse section {
+        border: thin solid black;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+    
+    .margin-collapse span {
+        border: thin solid black;
+        display: inline-block;
+        margin-right: 16px;
+        margin-left: 16px;
+    }
+    /*Centrado de cajas*/
+    
+    .sitio-web {
+        border: thin solid black;
+        background-color: thistle;
+        width: 800px;
+        height: 1000px;
+        padding: 16px;
+        margin-left: auto;
+        margin-right: auto;
+    }
