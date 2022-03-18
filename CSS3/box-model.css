@@ -100,4 +100,30 @@ caja de Bloque
 }
 
 
-/**/
+/*La propiedad display tiene lo siguiente
+    -inline
+    -block
+    -inline-block - se comporta como un elemento de linea pero acepta modificar sus dimensiones (alto y ancho).
+    -none
+    -table
+    -list-item
+    -flex
+    -grid
+*/
+
+.caja-none,
+.caja-linea-bloque {
+    background-color: greenyellow;
+    color: black;
+    width: 600px;
+    height: 300px;
+    border: medium solid black;
+}
+
+.caja-linea-bloque {
+    display: inline-block;
+}
+
+.caja-none {
+    display: none;
+}
