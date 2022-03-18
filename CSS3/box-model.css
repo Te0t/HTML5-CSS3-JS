@@ -112,7 +112,8 @@ caja de Bloque
 */
 
 .caja-none,
-.caja-linea-bloque {
+.caja-linea-bloque,
+.caja-hidden {
     background-color: greenyellow;
     color: black;
     width: 600px;
@@ -126,4 +127,11 @@ caja de Bloque
 
 .caja-none {
     display: none;
+}
+
+
+/*Esta propiedad no hace que desaparezca como la de display none si no que no lo hace visible pero si ocupa el espacio*/
+
+.caja-hidden {
+    visibility: hidden;
 }
